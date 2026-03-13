@@ -10,7 +10,7 @@ function Footer() {
     account: false,
     apple: false,
     about: false
-  })
+  });
 
 // The Key parameter is used to identify which section of the footer is being toggled. When the toggle function is called, it updates the open state by toggling the boolean value of the specified key (e.g., "explore"). This allows for multiple sections in the footer to be independently toggled open or closed based on user interaction.
   const toggle = (key) => {
@@ -21,7 +21,6 @@ function Footer() {
       }
     })
   }
-
 
   return (
       <footer className='bg-gray-100 mt-4 py-6 pb-4 '>
