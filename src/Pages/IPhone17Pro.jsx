@@ -34,8 +34,10 @@ import rearImage from "./../assets/rear_camera_large.jpg";
 import videoLarge from './../assets/video_large_2x.png';
 import proVideoLarge from './../assets/pro_video_large.jpg';
 import proVideoSmall from './../assets/pro_video_small.jpg';
-
-
+import performanceLarge from './../assets/performance_large_2x.jpg';
+import performanceSmall from './../assets/performance_small.jpg';
+import batteryLarge from './../assets/battery_large_2x.jpg';
+import batterySmall from './../assets/battery_small.jpg';
 
 // mm Starts here
 import mm100 from "../assets/MM Folder/100mm.jpg";
@@ -269,6 +271,83 @@ function IPhone17Pro() {
       behavior: "smooth"
     })
   }
+
+  const sliderRef2 = useRef(null);
+
+  const sliderLeft2 = () => {
+    sliderRef2.current.scrollBy({
+      left: -300,
+      behavior: "smooth"
+    })
+  }
+
+  const sliderRight2 = () => {
+    sliderRef2.current.scrollBy({
+      left: 300,
+      behavior: "smooth"
+    })
+  }
+
+// This is where the select data is stored
+  const select = {
+      iPhone13: [
+        {text: "Up to", title: "40% faster", paragraph: "6-core CPU"},
+        {text: "Up to", title: "2.5x faster", paragraph: "6-core CPU"},
+        {text: "Up to", title: "12 more hours", paragraph: "video playback on iphone 17 Pro"},
+        {text: "Up to", title: "18 more hours", paragraph: "video playback on iphone 17 Pro Max"},
+      ],
+      iPhone13Pro: [
+        {text: "Up to", title: "50% faster", paragraph: "6-core CPU"},
+        {text: "Up to", title: "2.2x faster", paragraph: "6-core CPU"},
+        {text: "Up to", title: "9 more hours", paragraph: "video playback on iphone 17 Pro"},
+        {text: "Up to", title: "15 more hours", paragraph: "video playback on iphone 17 Pro Max"},
+      ],
+      iPhone13ProMax: [
+        {text: "Up to", title: "50% faster", paragraph: "6-core CPU"},
+        {text: "Up to", title: "2.2x faster", paragraph: "6-core CPU"},
+        {text: "Up to", title: "3 more hours", paragraph: "video playback on iphone 17 Pro"},
+        {text: "Up to", title: "9 more hours", paragraph: "video playback on iphone 17 Pro Max"},
+      ],
+      iPhone14: [
+        {text: "Up to", title: "50% faster", paragraph: "6-core CPU"},
+        {text: "Up to", title: "2.2x faster", paragraph: "6-core CPU"},
+        {text: "Up to", title: "11 more hours", paragraph: "video playback on iphone 17 Pro"},
+        {text: "Up to", title: "17 more hours", paragraph: "video playback on iphone 17 Pro Max"},
+      ],
+      iPhone14Pro: [
+        {text: "Up to", title: "40% faster", paragraph: "6-core CPU"},
+        {text: "Up to", title: "2x faster", paragraph: "6-core CPU"},
+        {text: "Up to", title: "8 more hours", paragraph: "video playback on iphone 17 Pro"},
+        {text: "Up to", title: "14 more hours", paragraph: "video playback on iphone 17 Pro Max"},
+      ],
+      iPhone14ProMax: [
+        {text: "Up to", title: "40% faster", paragraph: "6-core CPU"},
+        {text: "Up to", title: "2x faster", paragraph: "6-core CPU"},
+        {text: "Up to", title: "2 more hours", paragraph: "video playback on iphone 17 Pro"},
+        {text: "Up to", title: "8 more hours", paragraph: "video playback on iphone 17 Pro Max"},
+      ],
+      iPhone15: [
+        {text: "Up to", title: "40% faster", paragraph: "6-core CPU"},
+        {text: "Up to", title: "2x faster", paragraph: "6-core CPU"},
+        {text: "Up to", title: "11 more hours", paragraph: "video playback on iphone 17 Pro"},
+        {text: "Up to", title: "17 more hours", paragraph: "video playback on iphone 17 Pro Max"},
+      ],
+      iPhone15Pro: [
+        {text: "Up to", title: "50% faster", paragraph: "6-core CPU"},
+        {text: "Up to", title: "2x faster", paragraph: "6-core CPU"},
+        {text: "Up to", title: "8 more hours", paragraph: "video playback on iphone 17 Pro"},
+        {text: "Up to", title: "14 more hours", paragraph: "video playback on iphone 17 Pro Max"},
+      ],
+      iPhone15ProMax: [
+        {text: "Up to", title: "20% faster", paragraph: "6-core CPU"},
+        {text: "Up to", title: "50% faster", paragraph: "6-core CPU"},
+        {text: "Up to", title: "2 more hours", paragraph: "video playback on iphone 17 Pro"},
+        {text: "Up to", title: "8 more hours", paragraph: "video playback on iphone 17 Pro Max"},
+      ],
+  }
+
+  const [selected, setSelected] = useState("iPhone14Pro")
+
 
   return (
     <div className="w-full">
@@ -702,27 +781,20 @@ function IPhone17Pro() {
 
             <div className="flex flex-col items-start pb-10 gap-20 md:flex-row md:items-center md:gap-0 lg:gap-0 xl:gap-0">
               <div className="">
-                <img
-                  src={heroCamera}
-                  alt=""
-                  className="-ml-40 md:-ml-8 lg:-ml-30 w-[700px] md:w-[700px] lg:w-[900px] xl:w-[1080px]"
-                />
+                <img src={heroCamera} alt="" className="-ml-40 md:-ml-8 lg:-ml-30 w-[700px] md:w-[700px] lg:w-[900px] xl:w-[1080px]"/>
               </div>
 
               <div className="flex gap-10 px-4 md:flex-col">
                 <div className="">
                   <FadeInTop>
                     <h2 className="text-gray-400 font-medium text-lg md:text-xl lg:text-xl">
-                      {" "}
-                      Up to{" "}
+                      Up to
                     </h2>
                     <h1 className="text-orange-500 font-medium text-4xl md:text-3xl lg:text-3xl xl:text-5xl">
-                      {" "}
-                      8x{" "}
+                      8x
                     </h1>
                     <h2 className="text-gray-400 font-medium text-lg md:text-xl lg:text-xl">
-                      {" "}
-                      optical-quality zoom{" "}
+                      optical-quality zoom
                     </h2>
                   </FadeInTop>
                 </div>
@@ -730,16 +802,13 @@ function IPhone17Pro() {
                 <div className="">
                   <FadeInTop>
                     <h2 className="text-gray-400 font-medium text-lg md:text-xl lg:text-xl">
-                      
                       All
                     </h2>
                     <h1 className="text-orange-500 font-medium text-4xl md:text-3xl lg:text-3xl xl:text-5xl">
-                      {" "}
-                      48MP{" "}
+                      48MP
                     </h1>
                     <h2 className="text-gray-400 font-medium text-lg md:text-xl lg:text-xl">
-                      {" "}
-                      rear cameras{" "}
+                      rear cameras
                     </h2>
                   </FadeInTop>
                 </div>
@@ -784,10 +853,7 @@ function IPhone17Pro() {
                   <MdOutlineKeyboardArrowLeft />
                 </button>
 
-                <div
-                  className="flex items-center gap-1 w-full overflow-x-hidden  whitespace-nowrap pl-10 pr-10 lg:overflow-x-visible lg:pl-0 lg:pr-0"
-                  ref={scrollRef}
-                >
+                <div className="flex items-center gap-1 w-full overflow-x-hidden  whitespace-nowrap pl-10 pr-10 lg:overflow-x-visible lg:pl-0 lg:pr-0" ref={scrollRef}>
                   {sizes.map((size, index) => (
                     <button
                       key={index}
@@ -800,10 +866,7 @@ function IPhone17Pro() {
                 </div>
 
                 {/* right arrow */}
-                <button
-                  className="absolute right-2 top-1/2 -translate-y-1/2 text-white  text-3xl lg:hidden z-10 bg-zinc-800"
-                  onClick={scrollRight}
-                >
+                <button className="absolute right-2 top-1/2 -translate-y-1/2 text-white  text-3xl lg:hidden z-10 bg-zinc-800" onClick={scrollRight}>
                   <MdOutlineKeyboardArrowRight />
                 </button>
               </div>
@@ -811,8 +874,7 @@ function IPhone17Pro() {
 
             <div className="mt-8">
               <h2 className="text-white font-medium text-center text-2xl">
-                {" "}
-                {sizes[activeImage].text}{" "}
+                {sizes[activeImage].text}
               </h2>
             </div>
           </div>
@@ -833,7 +895,7 @@ function IPhone17Pro() {
             <div className="mt-30 pb-30">
               <div className="flex flex-col items-center justify-center gap-16 px-14 md:flex-row ">
                 <FadeInTop>
-                  <div className="w-full max-w-[330px]">
+                  <div className="w-full max-w-[350px]">
                     <h1 className="text-white font-medium text-xl mb-6">
                       48MP Fusion Main camera
                     </h1>
@@ -851,7 +913,7 @@ function IPhone17Pro() {
                 </FadeInTop>
 
                 <FadeInTop>
-                  <div className="w-full max-w-[330px]">
+                  <div className="w-full max-w-[350px]">
                     <h1 className="text-white font-medium text-xl mb-6">
                       48MP Fusion Ultra Wide camera
                     </h1>
@@ -869,7 +931,7 @@ function IPhone17Pro() {
                 </FadeInTop>
 
                 <FadeInTop>
-                  <div className="w-full max-w-[330px]">
+                  <div className="w-full max-w-[350px]">
                     <h1 className="text-white font-medium text-xl mb-6">
                       48MP Fusion Telephoto camera
                     </h1>
@@ -1021,7 +1083,7 @@ function IPhone17Pro() {
           <div className="w-full">
             <div className="overflow-hidden mt-40">
              
-              <div className="flex gap-6 overflow-x-auto scroll-smooth scrollbar-none px-10 sm:px-36 md:px-16 lg:px-18 xl:px-18" ref={sliderRef}>
+              <div className="flex gap-6 overflow-x-auto scroll-smooth scrollbar-none px-10 sm:px-36 md:px-16 lg:px-18 xl:px-18" ref={sliderRef2}>
 
               {/* First section */}
               <section className="flex flex-col shrink-0 h-full  w-[400px] sm:w-[340px] md:w-[369px] lg:w-[550px]">
@@ -1075,14 +1137,177 @@ function IPhone17Pro() {
             <div className="mt-14 flex items-center justify-end gap-6 pr-8 xl:pr-20">
             {/* Left Button */}
               <div className="bg-zinc-700 p-1 rounded-full flex items-center">
-                <button onClick={sliderLeft} className="text-gray-200 hover:text-white text-3xl font-medium cursor-pointer"> <MdOutlineKeyboardArrowLeft/> </button>
+                <button onClick={sliderLeft2} className="text-gray-200 hover:text-white text-3xl font-medium cursor-pointer"> <MdOutlineKeyboardArrowLeft/> </button>
               </div>
             {/* Right Button */}
               <div className="bg-zinc-700 p-1 rounded-full flex items-center">
-                <button onClick={sliderRight} className="text-gray-200 hover:text-white text-3xl font-medium cursor-pointer"> <MdOutlineKeyboardArrowRight/> </button>
+                <button onClick={sliderRight2} className="text-gray-200 hover:text-white text-3xl font-medium cursor-pointer"> <MdOutlineKeyboardArrowRight/> </button>
               </div>
             </div>
           </div>
+
+          {/* Another div starts here */}
+          <div className="pb-16 px-8">
+            <div className="pt-34">
+              <FadeInTop>
+                <p className="text-orange-500 text-left md:text-center font-bold text-lg md:text-2xl lg:text-center"> Performance </p>
+                <div className="max-w-[300px] md:max-w-[600px] md:mx-auto mt-2 md:mt-4  ">
+                  <h1 className="text-white text-left lg:text-center font-bold text-4xl md:text-5xl lg:text-7xl "> New dimensions in power.
+                  </h1>
+                </div>
+              </FadeInTop>
+            </div>
+
+            <div className="mt-10 md:mt-4 lg:mt-8 w-full mx-0 max-w-[450px] leading-tight sm:max-w-[500px] md:max-w-[460px] md:leading-snug lg:max-w-[690px] lg:leading-snug md:mx-auto">
+              <FadeInTop>
+                <h1 className="text-gray-400 text-left md:text-center text-[17px] sm:text-[18px] md:text-[20px] lg:text-[20px] font-medium"> Whether you’re working with intensive graphics or massive media files, iPhone 17 Pro offers blazing-fast performance — with advanced cooling technology. An Apple-designed laser-welded vapor chamber works with the aluminum unibody structure to efficiently move heat away from the A19 Pro chip, allowing for even higher sustained performance. This breakthrough in thermal management is key to the most powerful iPhone ever created. </h1>
+              </FadeInTop>
+            </div>
+          </div>
+
+          {/* Another Div Starts here */}
+          <div>
+            <div className="flex justify-center w-full">
+              <picture className="px-8">
+                <source media="(min-width: 768px)" srcSet={performanceLarge}/>
+                <img src={performanceSmall} alt="" className="w-full md:max-w-[600px] xl:max-w-[900px]"/>
+              </picture>
+            </div>
+
+            <div className="mt-35 ">
+              <div className="flex flex-col items-center justify-center gap-10 px-8 md:flex-row md:items-start ">
+                <FadeInTop>
+                  <div className="w-full max-w-[350px] h-full">
+                    <h1 className="text-white font-medium text-[22px] mb-6">
+                      A19 Pro chip
+                    </h1>
+                    <hr className="text-gray-500 border-t mb-4" />
+                    <p className="text-gray-400 font-medium text-[17px]">
+                      The Apple silicon powering iPhone 17 Pro delivers the highest iPhone performance ever, ideal for advanced gaming and the most demanding tasks.
+                    </p>
+                    
+                  </div>
+                </FadeInTop>
+
+                <FadeInTop>
+                  <div className="w-full max-w-[350px] h-full">
+                    <h1 className="text-white font-medium text-[22px] mb-6">
+                      Graphics and speed
+                    </h1>
+                    <hr className="text-gray-500 border-t mb-4" />
+                    <p className="text-gray-400 font-medium text-[18px]">
+                      Paired with an innovative thermal design, the GPU and CPU deliver up to 40 percent better sustained performance.
+                    </p>
+                  </div>
+                </FadeInTop>
+
+                <FadeInTop>
+                  <div className="w-full max-w-[350px] h-full ">
+                    <h1 className="text-white font-medium text-[22px] mb-6">
+                      Neural Accelators
+                    </h1>
+                    <hr className="text-gray-500 border-t mb-4" />
+                    <p className="text-gray-400 font-medium text-[17px]">
+                     With Neural Accelerators integrated into each GPU core, iPhone 17 Pro is more powerful than ever when working with local AI models.
+                    </p>
+                  </div>
+                </FadeInTop>
+              </div>
+            </div>
+          </div>
+
+          {/* Another Div Starts here */}
+          <div className=" mt-30">
+            <div className="ml-[10%] sm:ml-[20%] pr-6 md:ml-0 md:px-6 xl:px-20">
+              <div className="w-full max-w-[200px] sm:max-w-[200px] md:max-w-[200px] xl:max-w-[350px] leading-none mb-4">
+                <h1 className="text-white font-bold text-[30px] xl:text-[48px]"> Battery life. All-time high. </h1>
+              </div>
+              <div className="w-full text-gray-400 font-medium max-w-[380px] text-[17px] leading-tight sm:max-w-[350px] md:text-[19px] md:max-w-[278px] md:leading-snug xl:max-w-[460px] xl:text-[21px] xl:leading-snug">
+                <h1> The new internal design creates significant additional room for battery capacity, giving iPhone 17 Pro Max the <span className="text-white"> best-ever iPhone battery life, </span> and up to 4 more hours per full charge compared to iPhone 15 Pro Max. From extended video playback to after-hours work, it’s always ready for overtime.</h1>
+              </div>
+
+            </div>
+
+            <div className="mt-14 md:mt-0 overflow-hidden">
+              <picture className="">
+                <source media="(min-width: 768px)" srcSet={batteryLarge}/>
+                <img src={batterySmall} alt="" className="w-[200%] sm:max-w-[900px] md:max-w-[920px] lg:max-w-[1300px] translate-x-[2vw] sm:translate-x-[-10vw] md:translate-x-0 lg:translate-x-[-1vw] "/>
+              </picture>
+            </div>
+
+            <div className="mt-16 w-full flex justify-center">
+            <div className="flex flex-wrap gap-20 w-full max-w-[700px] lg:max-w-none justify-center px-10  ">
+
+              <div className="w-full max-w-[350px] mx-auto md:mx-0 md:w-1/2 md:max-w-[170px] lg:max-w-[170px] md:text-left">
+                <h2 className="text-gray-400 font-medium text-md"> Up to </h2>
+                <h1 className="text-orange-500 font-bold text-[22px] xl:text-[28px]"> 31 hours </h1>
+                <p className="text-gray-400 font-medium text-[17px] leading-tight"> video playback on iphone 17 Pro </p>
+              </div>
+
+              <div className=" w-full max-w-[350px] mx-auto md:mx-0 md:w-1/2 lg:max-w-[170px] md:max-w-[170px] md:text-left">
+                <p className="text-gray-400 font-medium text-md"> Up to </p>
+                <h1 className="text-orange-500 text-[28px] font-bold"> 37 hours </h1>
+                <p className="text-gray-400 font-medium text-[18px] leading-tight"> video playback on iPhone 17 Pro Max </p>
+              </div>
+
+              <div className=" w-full max-w-[350px] mx-auto md:mx-0 md:w-full md:max-w-[350px] lg:max-w-[195px]">
+                <p className="text-gray-400 font-medium text-md"> Up to </p>
+                <h1 className="text-orange-500 text-[30px] w-full max-w-[195px] font-bold leading-tight"> 50% charge in 20 minutes </h1>
+                <p className="text-gray-400 font-medium text-[18px]"> with high‑wattage power adapter </p>
+              </div>
+            </div>
+            </div>
+          </div>
+
+          {/* Another Div Starts here */}
+          <div className="mt-40 px-6">
+            <div className="pb-40 mx-auto md:mx-auto rounded-4xl pt-8 md:pt-14 px-8 md:px-22 bg-gradient-to-b from-zinc-900 via-sky-90 to-black w-full max-w-[400px] md:max-w-[700px] lg:max-w-[1100px]">
+
+              <div className="flex flex-col gap-4 md:flex-row md:items-center ">
+                <div>
+                  <h1 className="text-[18px] text-gray-400 "> Compare with </h1>
+                </div>
+                <div>
+                  <select className="w-full border border-gray-400 px-4 py-1 pr-8 rounded-full text-white bg-zinc-800 cursor-pointer text-xl font-medium focus:border-blue-700 focus:outline-none" value={selected} onChange={(e) => setSelected(e.target.value)}>
+                    <option value="iPhone13"> iPhone 13 </option>
+                    <option value="iPhone13Pro"> iPhone 13 Pro </option>
+                    <option value="iPhone13ProMax"> iPhone 13 Pro Max </option>
+                    <option value="iPhone14"> iPhone 14 </option>
+                    <option value="iPhone14Pro"> iPhone 14 Pro </option>
+                    <option value="iPhone14ProMax"> iPhone 14 Pro Max </option>
+                    <option value="iPhone15"> iPhone 15 </option>
+                    <option value="iPhone15Pro"> iPhone 14 Pro </option>
+                    <option value="iPhone15ProMax"> iPhone 14 Pro Max </option>
+                  </select>
+                </div>
+              </div>
+
+              {/* <div className="flex flex-col gap-10 mt-8 md:flex-row md:items-start lg:items-start md:mt-20 md:gap-22"> */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mt-8 md:mt-16">
+                {select[selected].map((option, index) => (
+                      <div key={index} className="">
+                        <p className="text-gray-400 font-medium text-md"> {option.text}</p>
+                        <h1 className="text-white text-xl font-medium"> {option.title} </h1>
+                        <p className="text-gray-400 font-medium text-lg w-full max-w-[200px]"> {option.paragraph} </p>
+                      </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Another Div starts here */}
+          
+
+          
+
+
+
+
+
+
+
+
+
 
 
 
