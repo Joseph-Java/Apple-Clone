@@ -38,6 +38,11 @@ import performanceLarge from './../assets/performance_large_2x.jpg';
 import performanceSmall from './../assets/performance_small.jpg';
 import batteryLarge from './../assets/battery_large_2x.jpg';
 import batterySmall from './../assets/battery_small.jpg';
+import heroLeft from './../assets/hero_features_left_large.jpg';
+import heroMiddle from './../assets/hero_features_middle_large.jpg';
+import heroRight from './../assets/hero_features_right_large.jpg';
+import { PiFilmStripDuotone } from "react-icons/pi";
+
 
 // mm Starts here
 import mm100 from "../assets/MM Folder/100mm.jpg";
@@ -79,6 +84,33 @@ import slider2ImageMobile3 from './../assets/slider Folder/genlock_small.jpg';
 import slider2ImageDesktop4 from './../assets/slider Folder/spatial_capture_large_2x.jpg';
 import slider2ImageMobile4 from './../assets/slider Folder/spatial_capture_small.jpg';
 
+// Slider 3
+import slider3ImageDesktop1 from './../assets/slider Folder/liquid_glass_large.jpg';
+import slider3ImageMobile1 from './../assets/slider Folder/liquid_glass_small.jpg';
+import slider3ImageDesktop2 from './../assets/slider Folder/lock_screen_large.jpg';
+import slider3ImageMobile2 from './../assets/slider Folder/lock_screen_small.jpg';
+import slider3ImageDesktop3 from './../assets/slider Folder/polls_large.jpg';
+import slider3ImageMobile3 from './../assets/slider Folder/polls_small.jpg';
+
+// Slider 4
+import slider4ImageDesktop1 from './../assets/Slider2 Folder/visual_intelligence_large.jpg';
+import slider4ImageMobile1 from './../assets/Slider2 Folder/visual_intelligence_large.jpg';
+import slider4ImageDesktop2 from './../assets/Slider2 Folder/live_translation_large.jpg';
+import slider4ImageMobile2 from './../assets/Slider2 Folder/live_translation_small.jpg';
+import slider4ImageDesktop3 from './../assets/Slider2 Folder/clean_up_large.jpg';
+import slider4ImageMobile3 from './../assets/Slider2 Folder/clean_upp_small.jpg';
+import slider4ImageDesktop4 from './../assets/Slider2 Folder/genmoji_large.jpg';
+import slider4ImageMobile4 from './../assets/Slider2 Folder/genmoji_small.jpg';
+import slider4ImageDesktop5 from './../assets/Slider2 Folder/writing_tools_large.jpg';
+import slider4ImageMobile5 from './../assets/Slider2 Folder/writing_tools__bilkkinnp0wi_small.jpg';
+
+// Slider 5
+import slider5ImageDesktop1 from './../assets/Slider3 Folder/esim_large_2x.jpg';
+import slider5ImageMobile1 from './../assets/Slider3 Folder/esim_small.jpg';
+import slider5ImageDesktop2 from './../assets/Slider3 Folder/crash_detection_large.jpg';
+import slider5ImageMobile2 from './../assets/Slider3 Folder/crash_detection_small.jpg';
+import ImageBox from "../Components/ImageBox.jsx";
+import TextBox from "../Components/TextBox.jsx";
 
 function IPhone17Pro() {
   const sectionRef = useRef(null);
@@ -288,6 +320,40 @@ function IPhone17Pro() {
     })
   }
 
+
+  const sliderRef3 = useRef(null);
+
+  const sliderLeft3 = () => {
+    sliderRef3.current.scrollBy({
+      left: -300,
+      behavior: "smooth"
+    })
+  }
+
+  const sliderRight3 = () => {
+    sliderRef3.current.scrollBy({
+      left: 300,
+      behavior: "smooth"
+    })
+  }
+
+
+  const sliderRef4 = useRef(null);
+
+  const sliderLeft4 = () => {
+    sliderRef4.current.scrollBy({
+      left: -300,
+      behavior: "smooth"
+    })
+  }
+
+  const sliderRight4 = () => {
+    sliderRef4.current.scrollBy({
+      left: 300,
+      behavior: "smooth"
+    })
+  }
+
 // This is where the select data is stored
   const select = {
       iPhone13: [
@@ -349,6 +415,87 @@ function IPhone17Pro() {
   const [selected, setSelected] = useState("iPhone14Pro")
 
 
+// THIS IS THE SECOND SELECT
+// This is where the select data is stored
+  const select2 = {
+      iPhone13: [
+        {type: "image", text: "Forged aluminum unibody design", image: sectionDesktop},
+        {type: "text", text: "Up to", title: "18 more hours", paragraph: "video playback on iPhone 17 Pro Max"},
+        {type: "image", text: "48MP rear cameras and Camera Control", image: heroCamera},
+        {type: "text", text: "Up to", title: "2.5x faster", paragraph: "GPU performance"},
+        {type: "image", text: "18MP Center Stage front camera", image: heroCamera},
+        {type: "image", image: slider3ImageMobile2, text: "Pro display with ProMotion up to 120Hz"},
+      ],
+      iPhone13Pro: [
+        {type: "image", text: "Forged aluminum unibody design", image: sectionDesktop},
+        {type: "text", text: "Up to", title: "15 more hours", paragraph: "video playback on iPhone 17 Pro Max"},
+        {type: "image", text: "48MP rear cameras and Camera Control", image: heroCamera},
+        {type: "text", text: "Up to", title: "2.2x faster", paragraph: "GPU performance"},
+        {type: "image", text: "18MP Center Stage front camera", image: heroCamera},
+        {type: "image", text: "Record video in 4K 120 fps Dolby Vision", icon: PiFilmStripDuotone},
+      ],
+      iPhone13ProMax: [
+        {type: "image", text: "Forged aluminum unibody design", image: sectionDesktop},
+        {type: "text", text: "Up to", title: "9 more hours", paragraph: "video playback on iPhone 17 Pro Max"},
+        {type: "image", text: "48MP rear cameras and Camera Control", image: heroCamera},
+        {type: "text", text: "Up to", title: "2.2x faster", paragraph: "GPU performance"},
+        {type: "image", text: "18MP Center Stage front camera", image: heroCamera},
+        {type: "image", text: "Record video in 4K 120 fps Dolby Vision", icon: PiFilmStripDuotone},
+      ],
+      iPhone14: [
+        {type: "image", text: "Forged aluminum unibody design", image: sectionDesktop},
+        {type: "text", text: "Up to", title: "17 more hours", paragraph: "video playback on iPhone 17 Pro Max"},
+        {type: "image", text: "48MP rear cameras and Camera Control", image: heroCamera},
+        {type: "text", text: "Up to", title: "2.2x faster", paragraph: "GPU performance"},
+        {type: "image", text: "18MP Center Stage front camera", image: heroCamera},
+        {type: "image", text: "Pro display with ProMotion up to 120Hz", icon: PiFilmStripDuotone},
+      ],
+      iPhone14Pro: [
+        {type: "image", text: "Forged aluminum unibody design", image: sectionDesktop},
+        {type: "text", text: "Up to", title: "14 more hours", paragraph: "video playback on iPhone 17 Pro Max"},
+        {type: "image", text: "48MP rear cameras and Camera Control", image: heroCamera},
+        {type: "text", text: "Up to", title: "2x faster", paragraph: "GPU performance"},
+        {type: "image", text: "18MP Center Stage front camera", image: heroCamera},
+        {type: "image", text: "Record video in 4K 120 fps Dolby Vision", icon: PiFilmStripDuotone},
+      ],
+      iPhone14ProMax: [ 
+        {type: "image", text: "Forged aluminum unibody design", image: sectionDesktop},
+        {type: "text", text: "Up to", title: "8 more hours", paragraph: "video playback on iPhone 17 Pro Max"},
+        {type: "image", text: "48MP rear cameras and Camera Control", image: heroCamera},
+        {type: "text", text: "Up to", title: "2x faster", paragraph: "GPU performance"},
+        {type: "image", text: "18MP Center Stage front camera", image: heroCamera},
+        {type: "image", text: "Record video in 4K 120 fps Dolby Vision", icon: PiFilmStripDuotone},
+      ],
+      iPhone15: [
+        {type: "image", text: "Forged aluminum unibody design", image: sectionDesktop},
+        {type: "text", text: "Up to", title: "17 more hours", paragraph: "video playback on iPhone 17 Pro Max"},
+        {type: "image", text: "48MP rear cameras and Camera Control", image: heroCamera},
+        {type: "text", text: "Up to", title: "2x faster", paragraph: "GPU performance"},
+        {type: "image", text: "Ceramic Shield 2 3x more scratch resistant", image: heroCamera},
+        {type: "image", text: "18MP Center Stage front camera", image: heroCamera},
+      ],
+      iPhone15Pro: [
+        {type: "image", text: "Forged aluminum unibody design", image: sectionDesktop},
+        {type: "text", text: "Up to", title: "14 more hours", paragraph: "video playback on iPhone 17 Pro Max"},
+        {type: "image", text: "48MP rear cameras and Camera Control", image: heroCamera},
+        {type: "text", text: "Up to", title: "50% faster", paragraph: "GPU performance"},
+        {type: "image", text: "Ceramic Shield 2 3x more scratch resistant", image: heroCamera},
+        {type: "image", text: "18MP Center Stage front camera", image: heroCamera},
+      ],
+      iPhone15ProMax: [
+        {type: "image", text: "Forged aluminum unibody design", image: sectionDesktop},
+        {type: "text", text: "Up to", title: "8 more hours", paragraph: "video playback on iPhone 17 Pro Max"},
+        {type: "image", text: "48MP rear cameras and Camera Control", image: heroCamera},
+        {type: "text", text: "Up to", title: "50% faster", paragraph: "GPU performance"},
+        {type: "image", text: "Ceramic Shield 2 3x more scratch resistant", image: heroCamera},
+        {type: "image", text: "18MP Center Stage front camera", image: heroCamera},
+      ],
+  }
+
+  const [selected2, setSelected2] = useState("iPhone14Pro")
+  const selectedData = select2[selected2]
+
+  
   return (
     <div className="w-full">
       {/* Hero Section */}
@@ -487,7 +634,7 @@ function IPhone17Pro() {
                 <div className="px-10">
                   <FadeInLeft>
                     <h2 className="text-gray-300 text-center font-semibold text-2xl w-full md:text-3xl ">
-                      {" "}
+                      
                       iOS 26. New look. Even more magic.{" "}
                     </h2>
                   </FadeInLeft>
@@ -1268,7 +1415,8 @@ function IPhone17Pro() {
                   <h1 className="text-[18px] text-gray-400 "> Compare with </h1>
                 </div>
                 <div>
-                  <select className="w-full border border-gray-400 px-4 py-1 pr-8 rounded-full text-white bg-zinc-800 cursor-pointer text-xl font-medium focus:border-blue-700 focus:outline-none" value={selected} onChange={(e) => setSelected(e.target.value)}>
+                  <select className="w-full border border-gray-400 px-4 py-1 pr-8 rounded-full text-white bg-zinc-800 
+                  cursor-pointer text-xl font-medium focus:border-blue-700 focus:outline-none" value={selected} onChange={(e) => setSelected(e.target.value)}>
                     <option value="iPhone13"> iPhone 13 </option>
                     <option value="iPhone13Pro"> iPhone 13 Pro </option>
                     <option value="iPhone13ProMax"> iPhone 13 Pro Max </option>
@@ -1296,6 +1444,293 @@ function IPhone17Pro() {
           </div>
 
           {/* Another Div starts here */}
+          <div>
+            <div className="pt-34">
+              <FadeInTop>
+                <p className="text-orange-500 text-center md:text-center font-bold text-lg md:text-2xl lg:text-center"> All in the family </p>
+                <div className="px-10 max-w-none md:max-w-[800px] mx-auto md:mx-auto mt-2 md:mt-4  ">
+                  <h1 className="text-white text-center lg:text-center font-bold text-4xl md:text-5xl lg:text-7xl "> All the must-haves </h1>
+                </div>
+                <div className="px-8 max-w-none  md:max-w-[600px] mx-auto md:mx-auto mt-2 md:mt-4  ">
+                  <h1 className="text-white text-center lg:text-center font-bold text-4xl md:text-5xl lg:text-7xl "> All on iPhone. </h1>
+                </div>
+              </FadeInTop>
+
+              <div className="mt-20 flex justify-center px-10">
+                <div className="flex w-full max-w-[800px]">
+                  <img src={heroLeft} alt="" className="w-[30%] xl:w-[40%] h-auto" />
+                  <img src={heroMiddle} alt="" className="w-[40%] xl:w-[50%] h-auto" />
+                  <img src={heroRight} alt="" className="w-[30%] xl:w-[40%] h-auto" />
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-10 px-12 md:mt-16 lg:mt-8 w-full mx-auto max-w-none leading-snug sm:max-w-[500px] md:max-w-[700px] md:leading-snug lg:max-w-[746px] lg:leading-snug md:mx-auto">
+              <FadeInTop>
+                <h1 className="text-gray-400 text-center md:text-center text-[17px] sm:text-[18px] md:text-[20px] lg:text-[21px] font-medium"> The latest iPhone models come packed with innovative features. Helpful Apple Intelligence tools such as visual intelligence12 and Writing tools to make your everyday easier. Fast, secure connections with <span className="text-white"> Wi‑Fi 7,<sup className="underline">13</sup> Bluetooth 6, 5G connectivity,<sup className="underline">14</sup> and eSIM.<sup className="underline">15</sup> </span> </h1> 
+              </FadeInTop>
+            </div>
+          </div>
+
+          {/* Another Div */}
+          <div className="w-full">
+            <div className="mt-50 overflow-hidden">
+                <div className="mb-8 px-10 sm:px-36 md:px-10 lg:px-18 xl:px-18">
+                  <h1 className="text-white font-medium text-2xl md:text-2xl xl:text-3xl lg:text-4xl"> iOS 26.New look. </h1>
+                  <h1 className="text-white font-medium text-2xl md:text-2xl xl:text-3xl lg:text-3xl"> Even more magic. </h1>
+                </div>
+                
+                <div className="flex gap-4 overflow-x-auto scroll-smooth scrollbar-none px-10 sm:px-36 md:px-10 lg:px-18 xl:px-18" ref={sliderRef3}>
+
+                {/* First Section */}
+                <FadeInTop>
+                <section className="flex flex-col shrink-0 h-full max-w-[262px] md:max-w-[350px] xl:max-w-[375px]">
+                <div>
+                  <picture>
+                    <source media="(min-width: 768px)" srcset={slider3ImageDesktop1} />
+                    <img src={slider3ImageMobile1} alt="" className="rounded-3xl "/>
+                  </picture>
+                </div>
+                  <h1 className="mt-6 px-4 text-[16px] text-gray-400 font-medium border-gray-400 leading-snug sm:text-[16px] md:text-[18px] xl:text-[18px]"> Liquid Glass. 
+                    The new iOS design reflects and refracts what’s beneath it in real time, 
+                    dynamically adapting to your content across apps and devices. </h1>
+                </section>
+                </FadeInTop>
+
+
+                {/* Second section */}
+                <FadeInTop>
+                <section className="flex flex-col shrink-0 h-full max-w-[270px] md:max-w-[350px] xl:max-w-[375px]">
+                <div className="flex-1 mb-4">
+                <picture>
+                  <source media="(min-width: 768px)" srcSet={slider3ImageDesktop2}/>
+                  <img src={slider3ImageMobile2} alt="" className="rounded-3xl " />
+                </picture>
+                </div> 
+                <h1 className="mt-2 px-4 text-[15px] text-gray-400 font-medium border-gray-400 leading-snug sm:text-[16px] md:text-[18px] xl:text-[18px]"> 
+                  A more vibrant Lock Screen. The time dynamically adapts to your photo wallpaper and notifications, keeping your subject in view. When you move your iPhone, 
+                  your photo comes to life with a new 3D effect. </h1>
+                </section>
+                </FadeInTop>
+
+              {/* Third section */}
+                <FadeInTop>
+               <section className="bg-flex flex-col shrink-0 h-full max-w-[270px] md:max-w-[350px] xl:max-w-[375px]">
+                <div className="flex-1 mb-4">
+                <picture>
+                  <source media="(min-width: 768px)" srcSet={slider3ImageDesktop3}/>
+                  <img src={slider3ImageMobile3} alt="" className="rounded-3xl " />
+                </picture>
+                </div> 
+                <h1 className="mt-2 px-4 text-[16px] text-gray-400 font-medium border-gray-400 leading-snug sm:text-[16px] md:text-[19px] xl:text-[18px]"> 
+                  Polls in Messages. Create a poll and let everyone in the conversation contribute and watch as the votes come in. </h1>
+              </section>
+              </FadeInTop>
+
+              </div>
+            </div>
+
+            {/* This div controls the movement of the slider */}
+            <div className="mt-14 flex items-center justify-end gap-6 pr-8 xl:pr-20">
+            {/* Left Button */}
+              <div className="bg-zinc-700 p-1 rounded-full flex items-center">
+                <button onClick={sliderLeft3} className="text-gray-200 hover:text-white text-3xl font-medium cursor-pointer"> <MdOutlineKeyboardArrowLeft/> </button>
+              </div>
+            {/* Right Button */}
+              <div className="bg-zinc-700 p-1 rounded-full flex items-center">
+                <button onClick={sliderRight3} className="text-gray-200 hover:text-white text-3xl font-medium cursor-pointer"> <MdOutlineKeyboardArrowRight/> </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Another Div Starts here */}
+          <div className="w-full"> 
+            <div className="mt-40">
+              <div className="mb-8 px-10 sm:px-36 md:px-10 lg:px-18 xl:px-18">
+                <FadeInTop>
+                  <p className="text-gray-400 text-[24px] font-medium"> Available in select languages </p>
+                  <h1 className="text-white font-medium text-2xl md:text-2xl xl:text-3xl lg:text-3xl"> Apple Intelligence. </h1>
+                  <h1 className="text-white font-medium text-2xl md:text-2xl xl:text-3xl lg:text-3xl"> Effortlessly helpful every day. </h1>
+                </FadeInTop>
+              </div>
+              
+              <div className="flex gap-4 overflow-x-auto scroll-smooth 
+              scrollbar-none px-10 sm:px-36 md:px-10 lg:px-18 xl:px-18" ref={sliderRef4}>
+
+                 {/* First Section */}
+                <section className="flex flex-col shrink-0 h-full max-w-[262px] md:max-w-[350px] xl:max-w-[375px]">
+                <div>
+                  <picture>
+                    <source media="(min-width: 768px)" srcset={slider4ImageDesktop1} />
+                    <img src={slider4ImageMobile1} alt="" className="rounded-3xl "/>
+                  </picture>
+                </div>
+                  <h1 className="mt-6 px-4 text-[16px] text-gray-400 font-medium border-gray-400 leading-snug sm:text-[16px] md:text-[18px] xl:text-[18px]"> 
+                    <span className="text-white"> Visual intelligence. </span> Search, ask questions, and take action with the content on your iPhone screen.
+                    <sup className="cursor-pointer">12</sup> </h1>
+                </section>
+
+                {/* Second Section */}
+                <section className="flex flex-col shrink-0 h-full max-w-[262px] md:max-w-[350px] xl:max-w-[375px]">
+                <div>
+                  <picture>
+                    <source media="(min-width: 768px)" srcset={slider4ImageDesktop2} />
+                    <img src={slider4ImageMobile2} alt="" className="rounded-3xl "/>
+                  </picture>
+                </div>
+                  <h1 className="mt-6 px-4 text-[16px] text-gray-400 font-medium border-gray-400 leading-snug sm:text-[16px] md:text-[18px] xl:text-[18px]"> <span className="text-white"> Live Translation. </span> 
+                    Automatically translate texts in Messages,<sup className="cursor-pointer underline">17</sup> and get live translated captions 
+                    in FaceTime and spoken translations in the Phone app.<sup className="cursor-pointer underline">2</sup></h1>
+                </section>
+
+                {/* Third Section */}
+                <section className="flex flex-col shrink-0 h-full max-w-[262px] md:max-w-[660px] xl:max-w-[700px]">
+                <div>
+                  <picture>
+                    <source media="(min-width: 768px)" srcset={slider4ImageDesktop3} />
+                    <img src={slider4ImageMobile3} alt="" className="rounded-3xl "/>
+                  </picture>
+                </div>
+                  <h1 className="mt-6 px-4 text-[16px] text-gray-400 font-medium border-gray-400 leading-snug sm:text-[16px] md:text-[18px] xl:text-[18px]"> 
+                    <span className="text-white"> Clean Up. </span> Remove unwanted distractions with a tap. It’s a photo editing tool that stays true to the 
+                    original intent of the photo.<sup className="cursor-pointer underline">6</sup> </h1>
+                </section>
+
+                {/* Fourth Section */}
+                <section className="flex flex-col shrink-0 h-full max-w-[262px] md:max-w-[350px] xl:max-w-[375px]">
+                <div>
+                  <picture>
+                    <source media="(min-width: 768px)" srcset={slider4ImageDesktop4} />
+                    <img src={slider4ImageMobile4} alt="" className="rounded-3xl "/>
+                  </picture>
+                </div>
+                  <h1 className="mt-6 px-4 text-[16px] text-gray-400 font-medium border-gray-400 leading-snug sm:text-[16px] md:text-[18px] xl:text-[18px]"> <span className="text-white"> Genmoji. </span>
+                    Make a Genmoji right in the keyboard to match any conversation. Want to create a sloth with a light bulb? You got it. Just provide a description.<sup className="cursor-pointer underline">18</sup> </h1>
+                </section>
+
+                {/* Fifth Section */}
+                <section className="flex flex-col shrink-0 h-full max-w-[262px] md:max-w-[350px] xl:max-w-[375px]">
+                <div>
+                  <picture>
+                    <source media="(min-width: 768px)" srcset={slider4ImageDesktop5} />
+                    <img src={slider4ImageMobile5} alt="" className="rounded-3xl "/>
+                  </picture>
+                </div>
+                  <h1 className="mt-6 px-4 text-[16px] text-gray-400 font-medium border-gray-400 leading-snug sm:text-[16px] md:text-[18px] xl:text-[18px]"> 
+                    <span className="text-white"> Writing Tools. </span> Proofread your text and rewrite different versions until the tone and wording are just right, and summarize selected text with a tap </h1>
+                </section>
+              </div>
+            </div>
+
+            {/* This div controls the movement of the slider */}
+            <div className="mt-14 flex items-center justify-end gap-6 pr-8 xl:pr-20">
+            {/* Left Button */}
+              <div className="bg-zinc-700 p-1 rounded-full flex items-center">
+                <button onClick={sliderLeft4} className="text-gray-200 hover:text-white text-3xl font-medium cursor-pointer"> <MdOutlineKeyboardArrowLeft/> </button>
+              </div>
+            {/* Right Button */}
+              <div className="bg-zinc-700 p-1 rounded-full flex items-center">
+                <button onClick={sliderRight4} className="text-gray-200 hover:text-white text-3xl font-medium cursor-pointer"> <MdOutlineKeyboardArrowRight/> </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Another Div Starts here */}
+          <div>
+            <div>
+              <div className="mb-8 px-10 sm:px-36 md:px-10 lg:px-18 xl:px-18">
+                  <h1 className="text-white font-medium text-2xl md:text-2xl xl:text-3xl lg:text-4xl"> Stay connected. </h1>
+                  <h1 className="text-white font-medium text-2xl md:text-2xl xl:text-3xl lg:text-3xl"> On and off the grid. </h1>
+              </div>
+              
+              <div className="flex gap-4 overflow-x-auto scroll-smooth 
+              scrollbar-none px-10 sm:px-36 md:px-10 lg:px-18 xl:px-18" ref={sliderRef4}>
+
+                 {/* First Section */}
+                <section className="flex flex-col shrink-0 h-full max-w-[262px] md:max-w-[350px] xl:max-w-[375px]">
+                <div>
+                  <picture>
+                    <source media="(min-width: 768px)" srcset={slider5ImageDesktop1} />
+                    <img src={slider5ImageMobile1} alt="" className="rounded-3xl "/>
+                  </picture>
+                </div>
+                  <h1 className="mt-6 px-4 text-[16px] text-gray-400 font-medium border-gray-400 leading-snug sm:text-[16px] md:text-[18px] xl:text-[18px]"> 
+                    <span className="text-white"> ESIM </span> A built-in eSIM provides seamless connectivity, flexibility, convenience, 
+                    and better security without the need for a physical SIM card — perfect for traveling.<sup className="cursor-pointer">15</sup> </h1>
+                </section>
+
+                 {/* Second Section */}
+                <section className="flex flex-col shrink-0 h-full max-w-[262px] md:max-w-[350px] xl:max-w-[375px]">
+                <div>
+                  <picture>
+                    <source media="(min-width: 768px)" srcset={slider5ImageDesktop2} />
+                    <img src={slider5ImageMobile2} alt="" className="rounded-3xl "/>
+                  </picture>
+                </div>
+                  <h1 className="mt-6 px-4 text-[16px] text-gray-400 font-medium border-gray-400 leading-snug sm:text-[16px] md:text-[18px] xl:text-[18px]"> 
+                    <span className="text-white"> Crash Detection </span> Hardware sensors and advanced motion algorithms 
+                    can detect a severe car crash and call for help if you can’t.<sup className="cursor-pointer">19</sup> </h1>
+                </section>
+              </div>
+            </div>
+          </div>
+
+          {/* Another Div starts here */}
+          <div className="mt-50">
+            <div className="bg-zinc-900  w-full max-w-full  md:max-w-[700px] lg:max-w-[1100px] md:mx-auto px-4 sm:px-6 md:px-8 lg:px-20 pt-16 md:pt-14 pb-24 md:rounded-3xl">
+            
+            {/* <div className="bg-zinc-900 pb-40 sm:mx-auto md:mx-auto md:rounded-3xl pt-24 md:pt-14 px-24 sm:px-35 md:px-14  */}
+            {/* w-full max-w-none sm:max-w-none md:max-w-[700px] lg:max-w-[1100px]"> */}
+              <div className="">  
+              <div className="flex flex-col justify-between lg:flex-row">
+                <div className="px-5 mb-8 md:mb-6 w-full max-w-[280px] sm:max-w-[280px] md:max-w-[500px] xl:max-w-[500px] "> 
+                  <h1 className="text-white font-bold text-[25px] sm:text-[25px] md:text-[44px] xl:text-5xl leading-tight xl:leading-tight"> Worth the upgrade? 100 percent.</h1>
+                </div>
+
+                <div className="w-full max-w-none sm:max-w-none md:max-w-[300px] xl:max-w-[300px]">
+                  <div className="px-5 w-full max-w-none sm:max-w-none md:max-w-[260px] lg:max-w-[260px] xl:max-w-[260px] mb-2">
+                    <p className="text-white text-[14px] sm:text-[14px] md:text-[18px] lg:text-[18px] xl:text-[18px] font-medium leading-tight"> Select an iPhone to compare to iPhone 17 Pro: </p>
+                  </div>
+                  <div>
+                  <select className="w-full border border-gray-400 px-5 py-1 md:px-4 md:py-3 pr-8 rounded-full text-white 
+                  bg-zinc-900 cursor-pointer text-xl font-medium focus:border-blue-700 focus:outline-none" value={selected2} onChange={(e) => setSelected2(e.target.value)}>
+                    <option value="iPhone13"> iPhone 13 </option>
+                    <option value="iPhone13Pro"> iPhone 13 Pro </option>
+                    <option value="iPhone13ProMax"> iPhone 13 Pro Max </option>
+                    <option value="iPhone14"> iPhone 14 </option>
+                    <option value="iPhone14Pro"> iPhone 14 Pro </option>
+                    <option value="iPhone14ProMax"> iPhone 14 Pro Max </option>
+                    <option value="iPhone15"> iPhone 15 </option>
+                    <option value="iPhone15Pro"> iPhone 14 Pro </option>
+                    <option value="iPhone15ProMax"> iPhone 14 Pro Max </option>
+                  </select>
+                </div>
+                </div>
+              </div>
+
+              <div className="mt-8 px-5 max-w-[250px] sm:max-w-[250px] md:max-w-none lg:max-w-none xl:max-w-none">
+                <h1 className="text-gray-400 font-medium sm:text-[17px] md:text-[22px] lg:text-[22px] xl:text-[22px] leading-tight"> A few ways <span className="text-white"> iPhone 17 Pro </span> gives you more. </h1>
+              </div>
+
+              {/* Div for the six boxes starts from here <div key={index} className="bg-black rounded-3xl text-center p-5 h-[300px]">
+                  */}
+              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 sm:gap-4 md:gap-4 lg:gap-10 mt-8 md:mt-16">
+                {selectedData.map((item, index) =>
+                  item.type === "image" ? (
+                    <ImageBox key={index} {...item} />
+                  ) : (
+                    <TextBox key={index} {...item} />
+                  )
+              )}
+              </div>
+            </div>
+            </div>
+          </div>
+
+          {/* Another Div starts here */}
+          
+
+
           
 
           
